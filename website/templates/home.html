@@ -1,7 +1,12 @@
 {% extends "layout.html" %}
 {% block content %}
-	<div class="text-center">
-		<h1>Welcome to the Applied Mathematics DUG!</h1>
-		<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+	<div class="row bg-light">
+        <div class="col-lg-6">
+		    <img src="{{ url_for('static', filename='images/am_new.jpg') }}" class="img-fluid pt-3 pb-3" alt="AMDUG">
+        </div>
+        <div class="col-lg-6 pt-5">
+            <h1>Welcome to the Applied Mathematics DUG!</h1>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
 	</div>
 {% endblock content %}

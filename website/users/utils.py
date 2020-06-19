@@ -23,7 +23,7 @@ def save_picture(form_picture):
 	i = i.crop((left, top, right, bottom))
 	i.save(picture_path)
 
-	return picture_fn
+	return picture_fn # filename
 
 
 def send_reset_email(user):

@@ -9,11 +9,13 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
 
-	{% if title %}
-		<title>AMDUG - {{ title }}</title>
+	{% if title != "Home" %}
+		<title>{{ title }}</title>
 	{% else %}
 		<title>AMDUG</title>
 	{% endif %}
+
+	<link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}">
 </head>
 <body style="padding-left: calc(100vw - 100%);">
 	<header class="site-header">
@@ -34,7 +36,7 @@
 				function setActiveTitle(title) {
 					const titles = {
 						'Home':'home-link',
-						'About':'about-link',
+						'About Us':'about-link',
 						'Upcoming Events':'events-link',
 						'Opportunities Fall 2020':'opportunities-link',
 						'Resources':'resources-link',
@@ -61,22 +63,18 @@
 	</header>
 
 	<main role="main" class="container">
-		<div class="row">
-			<div class="col-md-12">
-				{% with messages = get_flashed_messages(with_categories=true) %}
-					{% if messages %}
-							{% for category, message in messages %}
-								<div class="alert alert-{{ category }}">
-									{{ message }}
-								</div>
-							{% endfor %}
-					{% endif %}
-				{% endwith %}
-				<div class="mt-2">
-					{% block content %}{% endblock %}
-				</div>
-			</div>
-		<div>
+		{% with messages = get_flashed_messages(with_categories=true) %}
+			{% if messages %}
+					{% for category, message in messages %}
+						<div class="alert alert-{{ category }}">
+							{{ message }}
+						</div>
+					{% endfor %}
+			{% endif %}
+		{% endwith %}
+		<div class="mt-2">
+			{% block content %}{% endblock %}
+		</div>
 	</main>
 
 	<!-- jQuery Popper.js Bootstrap -->
