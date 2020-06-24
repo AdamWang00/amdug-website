@@ -32,3 +32,7 @@ def opportunities():
 def resources():
     return render_template('resources.html', title='Resources')
 
+
+@main.route("/contact")
+def contact():
+    return render_template('contact.html', title='Contact')

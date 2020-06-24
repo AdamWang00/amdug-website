@@ -39,6 +39,7 @@
 				<a id="events-link" class="nav-item nav-link" href="{{ url_for('main.events') }}">Upcoming Events</a>
 				<a id="opportunities-link" class="nav-item nav-link" href="{{ url_for('main.opportunities') }}">Opportunities Fall 2020</a>
 				<a id="resources-link" class="nav-item nav-link" href="{{ url_for('main.resources') }}">Resources</a>
+				<a id="contact-link" class="nav-item nav-link" href="{{ url_for('main.contact') }}">Contact</a>
 			<script type="text/javascript">
 				function setActiveTitle(title) {
 					const titles = {
@@ -47,6 +48,7 @@
 						'Upcoming Events':'events-link',
 						'Opportunities Fall 2020':'opportunities-link',
 						'Resources':'resources-link',
+						'Contact':'contact-link'
 					};
 					const activeId = titles[title];
 					if (activeId) {
