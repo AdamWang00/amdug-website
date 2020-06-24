@@ -1,7 +1,13 @@
 {% extends "layout.html" %}
 {% block content %}
-    <div class="text-center">
-    	<h1>Who We Are</h1>
+    <div class="row bg-light about">
+        <div class="col-lg-6 pl-5 pr-4 pt-5">
+            <p class="title">Who we are</p>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p class="lead">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="col-lg-6">
+            <img src="{{ url_for('static', filename='images/favicon.png') }}" class="img-fluid about pt-3 pb-3 pr-1" alt="AMDUG">
+        </div>
     </div>
-	<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 {% endblock content %}
