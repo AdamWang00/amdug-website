@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg-steel {
-  background-color: #7E8691;
+  background-color: #091833;
 }
 
 .site-header .navbar-nav .nav-link {
@@ -25,6 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .site-header .navbar-nav .nav-link.active {
   border-bottom: 2px solid #ffffff;
+  font-weight: 400;
 }
 
 .content-section {
@@ -64,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .article-content {
-  font-size: 17px;
+  font-size: 19px;
   white-space: pre-line;
 }
 
@@ -106,10 +107,28 @@ h1, h2, h3, h4, h5, h6 {
 
 .brand {
   font-weight: 400;
+  font-size: 24px;
 }
 
 .title {
   font-weight: 600;
   font-size: 38px;
   line-height: 44px;
+}
+
+.title-2 {
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.light-box {
+  background-color: #FFECD9;
+  border-width: 3px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+  height: 100%;
+}
+
+.shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

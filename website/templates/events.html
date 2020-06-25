@@ -2,7 +2,7 @@
 {% block content %}
 	{% if posts.items %}
 		{% for post in posts.items %}
-			<article class="media content-section">
+			<article class="media content-section shadow">
 				<img class="rounded-circle article-img mt-4 ml-3" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
 			  	<div class="media-body row">
 					<div class="col-lg-6">
