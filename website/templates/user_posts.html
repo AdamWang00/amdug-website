@@ -2,16 +2,20 @@
 {% block content %}
 	<h1 class="mb-3">Posts by {{ user.name }} ({{ posts.total }})</h1>
 	{% for post in posts.items %}
-		<article class="media content-section">
-			<img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
-		  <div class="media-body">
-		    <div class="article-metadata">
-		      <a class="mr-2" href="{{ url_for('users.user_posts', name=post.author.name) }}">{{ post.author.name }}</a>
-		      <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
-		    </div>
-		    <h2><a class="article-title" href="{{ url_for('posts.post', post_id=post.id) }}">{{ post.title }}</a></h2>
-		    <p class="article-content">{{ post.content }}</p>
-		  </div>
+		<article class="media content-section shadow bg-light">
+			<img class="rounded-circle article-img mt-4 ml-3" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
+		  	<div class="media-body row">
+				<div class="col-lg-6">
+					<div class="article-metadata pt-4 pl-2 pr-5">
+						<p class="article-title font-weight-bold pt-2"><a href="{{ url_for('posts.post', post_id=post.id) }}">{{ post.title }}</a></p>
+						<p class="article-author">Posted by <a href="{{ url_for('users.user_posts', name=post.author.name) }}">{{ post.author.name }}</a> on {{ post.date_posted.strftime('%m-%d-%Y') }}</p>
+						<p class="article-content">{{ post.content }}</p>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<img class="img-fluid float-right mt-3 mb-3 mr-1" src="{{ url_for('static', filename='event_pics/' + post.image_file) }}">
+				</div>
+			</div>
 		</article>
 	{% endfor %}
 	{% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=2, right_current=3) %}

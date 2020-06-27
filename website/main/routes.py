@@ -1,4 +1,6 @@
-from flask import render_template, request, Blueprint
+from flask import flash, render_template, redirect, url_for, request, Blueprint
+from website.main.forms import ContactForm
+from website.main.utils import send_contact_email
 from website.models import Post
 
 
@@ -33,6 +35,11 @@ def resources():
     return render_template('resources.html', title='Resources')
 
 
-@main.route("/contact")
+@main.route("/contact", methods=['GET', 'POST'])
 def contact():
-    return render_template('contact.html', title='Contact')
+    form = ContactForm()
+    if form.validate_on_submit():
+        send_contact_email(form.name.data, form.email.data, form.message.data)
+        flash('Your message has been sent. We will get back to you soon!', 'success')
+        return redirect(url_for('main.contact'))
+    return render_template('contact.html', title='Contact', form=form)

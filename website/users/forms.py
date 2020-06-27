@@ -37,6 +37,18 @@ class UpdateAccountForm(FlaskForm):
 	picture = FileField('Profile Picture', validators=[FileAllowed(['jpg', 'jfif', 'png'])])
 	submit = SubmitField('Update Info')
 
+	def validate_name(self, name):
+		if name.data != current_user.name:
+			user = User.query.filter_by(name=name.data).first()
+			if user:
+				raise ValidationError(f'This name is linked to an existing account.')
+
+	def validate_email(self, email):
+		if email.data != current_user.email:
+			user = User.query.filter_by(email=email.data).first()
+			if user:
+				raise ValidationError(f'This email is linked to an existing account.')
+
 
 class RequestResetForm(FlaskForm):
 	email = StringField('Email', validators=[DataRequired(), Email()])
@@ -52,16 +64,4 @@ class ResetPasswordForm(FlaskForm):
 	password = PasswordField('Password', validators=[DataRequired(), Length(min=6, max=20)])
 	confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password')])
 	submit = SubmitField('Reset Password')
-
-	def validate_name(self, name):
-		if name.data != current_user.name:
-			user = User.query.filter_by(name=name.data).first()
-			if user:
-				raise ValidationError(f'This name is linked to an existing account.')
-
-	def validate_email(self, email):
-		if email.data != current_user.email:
-			user = User.query.filter_by(email=email.data).first()
-			if user:
-				raise ValidationError(f'This email is linked to an existing account.')
 
