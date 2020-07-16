@@ -27,7 +27,7 @@ def events():
 
 @main.route("/opportunities")
 def opportunities():
-    return render_template('opportunities.html', title='Opportunities Fall 2020')
+    return render_template('opportunities.html', title='Opportunities 2020-2021')
 
 
 @main.route("/resources")

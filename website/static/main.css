@@ -1,7 +1,7 @@
 body {
   background: #E2EAF0;
   color: #333333;
-  margin-top: 5rem;
+  margin-top: 100px;
 
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -10,12 +10,16 @@ h1, h2, h3, h4, h5, h6 {
   color: #444444;
 }
 
-.navbar {
-  min-height: 80px;
+.bg-steel {
+  min-height: 100px;
+  opacity: 100%;
+  background-color: #091833;
+  transition: opacity 0.5s, min-height 0.25s;
 }
 
-.bg-steel {
-  background-color: #091833;
+.bg-steel.scrolled {
+  min-height: 60px;
+  opacity: 80%;
 }
 
 .site-header .navbar-nav .nav-link {
@@ -29,15 +33,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .site-header .navbar-nav .nav-link.active {
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
   font-weight: 400;
 }
 
 .content-section {
-  background: #ffffff;
   padding: 10px 20px;
-  border: 1px solid #dddddd;
-  border-radius: 3px;
   margin-bottom: 20px;
 }
 
@@ -52,8 +53,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about-name {
-  font-size: 30px;
-  font-weight: 600;
   margin-bottom: 0px;
 }
 
@@ -69,8 +68,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .article-title {
+  font-family: 'Quicksand', sans-serif;
   color: #444444;
-  font-size: 26px;
+  font-size: 30px;
   line-height: 100%;
   margin-bottom: 6px;
 }
@@ -89,6 +89,8 @@ h1, h2, h3, h4, h5, h6 {
 .article-content {
   font-size: 19px;
   white-space: pre-line;
+  display: inline-block;
+  word-break: break-word;
 }
 
 .article-img {
@@ -128,35 +130,54 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .brand {
-  font-weight: 400;
+  font-family: 'Quicksand', sans-serif;
   font-size: 24px;
 }
 
 .title {
-  font-weight: 600;
-  font-size: 38px;
-  line-height: 44px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 50px;
 }
 
 .title-2 {
-  font-weight: 400;
-  font-size: 28px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 30px;
 }
 
 .light-box {
-  background-color: #FFECD9;
-  border-width: 3px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+  background-color: #010057;
+  color: white;
+  border-radius: 15px;
   height: 100%;
+  transition-property: background-color, color, transform;
+  transition-duration: 0.25s;
 }
 
 .light-box:hover {
-  background-color: #FFE3AC;
+  background-color: #C2D8FF;
+  color: black;
   cursor: pointer;
-  box-shadow: 0 4px 16px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+}
+
+.link-box {
+  background-color: #CDE8FF;
+  height: 100%;
+  border: 10px;
+  border-width: 1px;
+  border-color: #004082;
+  transition-property: background-color, box-shadow, transform;
+  transition-duration: 0.25s;
+  margin: 2px;
+  padding: 5px;
 }
 
 .shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.f-16 {
+  font-size: 16px;
 }

@@ -8,11 +8,10 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lora&family=Quicksand:wght@300&display=swap" rel="stylesheet">
 	<style>
 		body {
-			font-family: 'Open Sans', sans-serif;
-			font-weight: 300;
+			font-family: 'Lora', serif;
 		}
 	</style>
 
@@ -22,7 +21,7 @@
 		<title>AMDUG</title>
 	{% endif %}
 
-	<link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}">
+	<link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
 </head>
 <body>
 	<header class="site-header">
@@ -35,9 +34,9 @@
 		  <div class="collapse navbar-collapse" id="navbarToggle">
 			<div class="navbar-nav mr-auto">
 				<a id="home-link" class="nav-item nav-link" href="{{ url_for('main.home') }}">Home</a>
-				<a id="about-link" class="nav-item nav-link" href="{{ url_for('main.about') }}">About Us</a>
-				<a id="events-link" class="nav-item nav-link" href="{{ url_for('main.events') }}">Upcoming Events</a>
-				<a id="opportunities-link" class="nav-item nav-link" href="{{ url_for('main.opportunities') }}">Opportunities Fall 2020</a>
+				<a id="about-link" class="nav-item nav-link" href="{{ url_for('main.about') }}">About</a>
+				<a id="events-link" class="nav-item nav-link" href="{{ url_for('main.events') }}">Events</a>
+				<a id="opportunities-link" class="nav-item nav-link" href="{{ url_for('main.opportunities') }}">Opportunities 2020-2021</a>
 				<a id="resources-link" class="nav-item nav-link" href="{{ url_for('main.resources') }}">Resources</a>
 				<a id="contact-link" class="nav-item nav-link" href="{{ url_for('main.contact') }}">Contact</a>
 			<script type="text/javascript">
@@ -46,7 +45,7 @@
 						'Home':'home-link',
 						'About Us':'about-link',
 						'Upcoming Events':'events-link',
-						'Opportunities Fall 2020':'opportunities-link',
+						'Opportunities 2020-2021':'opportunities-link',
 						'Resources':'resources-link',
 						'Contact':'contact-link'
 					};
@@ -70,8 +69,8 @@
 		</div>
 	  </nav>
 	</header>
-	<br>
 	<main role="main" class="container">
+		<br>
 		{% with messages = get_flashed_messages(with_categories=true) %}
 			{% if messages %}
 					{% for category, message in messages %}
@@ -84,8 +83,9 @@
 		{% block content %}{% endblock %}
 	</main>
 
-	<!-- jQuery Popper.js Bootstrap -->
+	<!-- jQuery Bootstrap -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
