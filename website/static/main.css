@@ -1,7 +1,7 @@
 body {
   background: #E2EAF0;
   color: #333333;
-  margin-top: 100px;
+  margin-top: 90px;
 
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -147,18 +147,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .light-box {
-  background-color: #010057;
-  color: white;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #010057;
   border-radius: 15px;
   height: 100%;
+
+  background-color: #010057;
+  color: white;
   transition-property: background-color, color, transform;
-  transition-duration: 0.25s;
+  transition-duration: 0.2s;
 }
 
 .light-box:hover {
-  background-color: #C2D8FF;
-  color: black;
   cursor: pointer;
+
+  background-color: #E7F0FF;
+  color: black;
   transform: translateY(-4px);
 }
 

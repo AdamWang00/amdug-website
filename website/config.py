@@ -1,7 +1,7 @@
-# import os
+from os import environ
 
 class Config:
-	DEBUG = False #True if os.environ.get('DEBUG') in ['true', 'True'] else False
+	DEBUG = True #environ.get("DEBUG").lower() == "true" if "DEBUG" in environ else True
 	
 	SQLALCHEMY_DATABASE_URI = 'sqlite:///site.db'
 	
