@@ -6,7 +6,7 @@
 			<div class="col-lg-6">
 				<div class="article-metadata pt-4 pl-2 pr-5">
 					<p class="article-title font-weight-bold pt-2"><a href="{{ url_for('posts.post', post_id=post.id) }}">{{ post.title }}</a></p>
-					<p class="article-author">Posted by <a href="{{ url_for('users.user_posts', name=post.author.name) }}">{{ post.author.name }}</a> on {{ post.date_posted.strftime('%m-%d-%Y') }}</p>
+					<p class="article-author">By <a href="{{ url_for('users.user_posts', name=post.author.name) }}">{{ post.author.name }}</a> on {{ post.date_posted.strftime('%m-%d-%Y') }}</p>
 					<p class="article-content">{{ post.content }}</p>
 					{% if post.author == current_user %}
 						<div>
