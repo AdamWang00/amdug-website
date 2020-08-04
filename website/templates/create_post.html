@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
+<div class="p-4 bg-light shadow">
 	<div class="content-section">
 		<form method="POST" action="" enctype="multipart/form-data">
 			{{ form.hidden_tag() }}
@@ -46,4 +47,5 @@
 			</div>
 		</form>
 	</div>
+</div>
 {% endblock content %}
