@@ -1,4 +1,4 @@
-const scrollThreshold = 32;
+const scrollThreshold = 40;
 
 function checkScrolled() {
 	if (window.scrollY > scrollThreshold) {

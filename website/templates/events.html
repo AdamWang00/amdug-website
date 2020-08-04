@@ -8,12 +8,12 @@
 					<div class="col-lg-6">
 						<div class="article-metadata pt-4 pl-2 pr-5">
 							<p class="article-title font-weight-bold pt-2">{{ post.title }}</p>
-							<p class="article-author">By {{ post.author.name }} on {{ post.date_posted.strftime('%m-%d-%Y') }}</p>
+							<p class="article-author">Posted by {{ post.author.name }} on {{ post.date_posted.strftime('%m-%d-%Y') }}</p>
 							<p class="article-content">{{ post.content }}</p>
 						</div>
 					</div>
 					<div class="col-lg-6">
-						<img class="img-fluid float-right mt-3 mb-3 ml-1 mr-1" src="{{ url_for('static', filename='event_pics/' + post.image_file) }}">
+						<img class="img-fluid float-right mt-3 mb-3 mr-1" src="{{ url_for('static', filename='event_pics/' + post.image_file) }}">
 					</div>
 				</div>
 			</article>

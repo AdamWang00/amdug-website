@@ -1,13 +1,13 @@
 {% extends "layout.html" %}
 {% block content %}
     <div class="row bg-light about shadow">
-        <div class="col-lg-6 p-5">
+        <div class="col-lg-6 pl-5 pr-4 pt-5">
             <p class="title">Who we are</p>
             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <p class="lead">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
-        <div class="col-lg-6 fit-img">
-            <img src="{{ url_for('static', filename='images/favicon.png') }}" alt="AMDUG">
+        <div class="col-lg-6">
+            <img src="{{ url_for('static', filename='images/favicon.png') }}" class="img-fluid about pt-3 pb-3 pr-1" alt="AMDUG">
         </div>
     </div>
     <br>
@@ -15,9 +15,9 @@
         <div class="col-lg-6">
             <img src="{{ url_for('static', filename='images/favicon.png') }}" class="img-fluid rounded-circle p-4" alt="AMDUG">
         </div>
-        <div class="col-lg-6 p-5">
-            <p class="title name">Jane Doe</p>
-            <p class="title-2">President</p>
+        <div class="col-lg-6 pl-5 pr-4 pt-5">
+            <p class="about-name title">Jane Doe</p>
+            <p class="about-role title-2">President</p>
             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
         </div>
     </div>

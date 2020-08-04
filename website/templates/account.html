@@ -1,15 +1,14 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="p-4 bg-light shadow">
 	<div class="content-section">
-	  	<div class="media">
-	    	<img class="rounded-circle account-img" src="{{ image_file }}">
-	    	<div class="media-body">
-	      		<h2 class="account-heading">{{ current_user.name }}</h2>
-	      		<p class="text-secondary">{{ current_user.email }}</p>
-	      		<a href="{{ url_for('users.user_posts', name=current_user.name) }}">My posts</a>
-	    	</div>
-		</div>
+	  <div class="media">
+	    <img class="rounded-circle account-img" src="{{ image_file }}">
+	    <div class="media-body">
+	      <h2 class="account-heading">{{ current_user.name }}</h2>
+	      <p class="text-secondary">{{ current_user.email }}</p>
+	      <a href="{{ url_for('users.user_posts', name=current_user.name) }}">My posts</a>
+	    </div>
+	  </div>
 		<form method="POST" action="" enctype="multipart/form-data">
 			{{ form.hidden_tag() }}
 			<fieldset class="form-group">
@@ -56,6 +55,4 @@
 			</div>
 		</form>
 	</div>
-</div>
-<br>
 {% endblock content %}
