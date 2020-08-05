@@ -1,7 +1,11 @@
 body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  
   background: #4C5364;
   color: #333333;
-  margin-top: 100px;
+  padding-top: 100px;
 
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -10,19 +14,27 @@ h1, h2, h3, h4, h5, h6 {
   color: #444444;
 }
 
+main {
+  flex: 1;
+}
+
 .my-header {
-  height: 100px;
+  padding: 0px;
+  min-height: 100px;
   opacity: 100%;
   background-color: #FAFAFA;
-  transition: opacity 0.4s, height 0.2s;
+  transition: opacity 0.4s, min-height 0.2s;
 }
 
 .my-header.scrolled {
-  height: 60px;
+  min-height: 60px;
   opacity: 84%;
 }
 
 .my-header .brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   color: #720D05;
   font-family: 'Quicksand', sans-serif;
   font-size: 32px;
@@ -35,6 +47,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .my-header.scrolled .brand {
   font-size: 24px;
+}
+
+.my-header .brand img {
+  width: 2.1rem;
+  margin-right: 0.7rem;
+  transition: width 0.2s, margin-right 0.2s;
+}
+
+.my-header.scrolled .brand img {
+  width: 1.5rem;
+  margin-right: 0.5rem;
 }
 
 .site-header .navbar-nav .nav-link {
@@ -55,6 +78,11 @@ h1, h2, h3, h4, h5, h6 {
 .site-header .navbar-nav .nav-link.active {
   color: black;
   border-color: black;
+}
+
+.my-footer {
+  color: white;
+  background-color: #242424;
 }
 
 .content-section {
