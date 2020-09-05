@@ -18,6 +18,27 @@ main {
   flex: 1;
 }
 
+.horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex {
+  flex: 1;
+}
+
+
 .my-header {
   padding: 0px;
   min-height: 100px;
@@ -28,14 +49,14 @@ main {
 
 .my-header.scrolled {
   min-height: 60px;
-  opacity: 84%;
+  opacity: 90%;
 }
 
 .my-header .brand {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #720D05;
+  color: #860900;
   font-family: 'Quicksand', sans-serif;
   font-size: 32px;
   transition: font-size 0.2s, color 0.4s;
@@ -81,13 +102,16 @@ main {
 }
 
 .my-footer {
-  color: white;
+  color: #E6E6E6;
   background-color: #242424;
+  text-align: center;
+  padding: 4px;
+  font-size: 14px;
 }
 
 .content-section {
-  padding: 10px 20px;
-  margin-bottom: 20px;
+  padding: 10px 0px;
+  margin-bottom: 24px;
 }
 
 .about {
@@ -102,11 +126,20 @@ main {
 
 .about .title.name {
   margin-bottom: 0px;
+  font-size: 36px;
 }
 
 .about .title-2 {
   font-size: 24px;
   font-weight: 400;
+}
+
+.about p.desc {
+  margin: 0px;
+}
+
+.lead {
+  margin: 0px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -118,7 +151,7 @@ main {
 .article-title {
   font-family: 'Quicksand', sans-serif;
   color: #444444;
-  font-size: 30px;
+  font-size: 26px;
   line-height: 100%;
   margin-bottom: 6px;
 }
@@ -134,8 +167,8 @@ main {
   color: #747474;
 }
 
-.article-content {
-  font-size: 19px;
+.article-content p {
+  font-size: 16px;
   white-space: pre-line;
   display: inline-block;
   word-break: break-word;
@@ -144,13 +177,7 @@ main {
 .article-img {
   height: 65px;
   width: 65px;
-  margin-right: 16px;
   object-fit: cover;
-}
-
-.article-metadata {
-  padding-bottom: 1px;
-  margin-bottom: 8px;
 }
 
 .article-metadata a:hover {
@@ -173,12 +200,12 @@ main {
 }
 
 .account-heading {
-  margin-top: 20px;
+  margin: 6px 0px;
   font-size: 2.5rem;
 }
 
 .title {
-  color: #720D05;
+  color: #860900;
   font-family: 'Quicksand', sans-serif;
   font-size: 42px;
   font-weight: bold;
@@ -191,6 +218,10 @@ main {
   font-size: 30px;
 }
 
+.desc {
+  font-size: 18px;
+}
+
 .light-box {
   border-style: solid;
   border-width: 2px;
@@ -200,6 +231,10 @@ main {
   color: white;
   transition-property: background-color, color, transform;
   transition-duration: 0.2s;
+}
+
+.box-desc {
+  margin: 0px;
 }
 
 .light-box.red {
@@ -225,7 +260,7 @@ main {
 }
 
 .light-box.red:hover {
-  background-color: #FFE6F0;
+  background-color: #FFEFF5;
 }
 
 .light-box.blue:hover {
@@ -252,8 +287,4 @@ div.resources p {
 
 .shadow {
   box-shadow: 0 4px 12px 6px rgba(0, 0, 0, 0.3);
-}
-
-.f-16 {
-  font-size: 16px;
 }

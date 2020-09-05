@@ -3,8 +3,7 @@
     <div class="row bg-light about shadow">
         <div class="col-lg-6 p-5">
             <p class="title">Who we are</p>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <p class="lead">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p class="lead">Brown AMDUG is run by a team of undergraduate students who are passionate about math and how it's used in fields such as computer science and economics. If you're interested in joining our team, come to our meetings&mdash;we'd love to talk with you!</p>
         </div>
         <div class="col-lg-6 fit-img">
             <img src="{{ url_for('static', filename='images/favicon.png') }}" alt="AMDUG">
@@ -12,13 +11,35 @@
     </div>
     <br>
     <div class="row bg-light about shadow">
-        <div class="col-lg-6">
-            <img src="{{ url_for('static', filename='images/favicon.png') }}" class="img-fluid rounded-circle p-4" alt="AMDUG">
+        <div class="col-lg-5">
+            <img src="{{ url_for('static', filename='images/berke_pfp.jpeg') }}" class="img-fluid rounded-circle p-4" alt="berke">
         </div>
-        <div class="col-lg-6 p-5">
-            <p class="title name">Jane Doe</p>
-            <p class="title-2">President</p>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+        <div class="col-lg-7 p-5">
+            <p class="title name">Berke T&uuml;rkay</p>
+            <p class="title-2">Co-president</p>
+            <p class="desc">Berke is a senior concentrating in APMA-Econ and is co-president of Brown AMDUG. He is also a TA for APMA 330 and enjoys discussions about economics, politics, and history.</p>
+        </div>
+    </div>
+    <br>
+    <div class="row bg-light about shadow">
+        <div class="col-lg-5">
+            <img src="{{ url_for('static', filename='images/james_pfp.png') }}" class="img-fluid rounded-circle p-4" alt="james">
+        </div>
+        <div class="col-lg-7 p-5">
+            <p class="title name">Demetri Tsatsaros</p>
+            <p class="title-2">Co-president</p>
+            <p class="desc">Demetri is a junior concentrating in APMA-CS and Classics and is co-president of Brown AMDUG. Outside of the classroom, he is also interested in cooking and powerlifting.</p>
+        </div>
+    </div>
+    <br>
+    <div class="row bg-light about shadow">
+        <div class="col-lg-5">
+            <img src="{{ url_for('static', filename='images/adam_pfp.jpg') }}" class="img-fluid rounded-circle p-4" alt="adam">
+        </div>
+        <div class="col-lg-7 p-5">
+            <p class="title name">Adam Wang</p>
+            <p class="title-2">Technology Chair</p>
+            <p class="desc">Adam is a sophomore planning to study computer science and applied math. He enjoys creating web and mobile apps as well as playing the cello in various music groups. </p>
         </div>
     </div>
 {% endblock content %}

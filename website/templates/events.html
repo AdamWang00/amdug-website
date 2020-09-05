@@ -2,18 +2,18 @@
 {% block content %}
 	{% if posts.items %}
 		{% for post in posts.items %}
-			<article class="media content-section shadow bg-light">
-				<img class="rounded-circle article-img mt-4 ml-3" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
-			  	<div class="media-body row">
+			<article class="horizontal content-section shadow bg-light">
+				<img class="rounded-circle article-img mt-4 ml-4 mr-2" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
+				<div class="row flex">
 					<div class="col-lg-6">
-						<div class="article-metadata pt-4 pl-2 pr-5">
+						<div class="flex pt-4 pb-4 pl-2 pr-2">
 							<p class="article-title font-weight-bold pt-2">{{ post.title }}</p>
 							<p class="article-author">{{ post.author.name }} | {{ post.date_posted.strftime('%m-%d-%Y') }}</p>
-							<p class="article-content">{{ post.content }}</p>
+							<div class="article-content">{{ post.content | markdown }}</div>
 						</div>
 					</div>
 					<div class="col-lg-6">
-						<img class="img-fluid float-right mt-3 mb-3 ml-1 mr-1" src="{{ url_for('static', filename='event_pics/' + post.image_file) }}">
+						<img class="img-fluid pt-1 pb-1 pr-3" src="{{ url_for('static', filename='event_pics/' + post.image_file) }}">
 					</div>
 				</div>
 			</article>
