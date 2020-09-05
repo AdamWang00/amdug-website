@@ -2,7 +2,7 @@
 {% block content %}
 	{% if posts.items %}
 		{% for post in posts.items %}
-			<article class="horizontal content-section shadow bg-light">
+			<article class="horizontal content-section shadow bg-lite">
 				<img class="rounded-circle article-img mt-4 ml-4 mr-2" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
 				<div class="row flex">
 					<div class="col-lg-6">
@@ -32,7 +32,7 @@
 			{% endfor %}
 		</div>
 	{% else %}
-		<div class="bg-light shadow text-center p-4">
+		<div class="bg-lite shadow text-center p-4">
 			<p class="lead" style="margin-bottom: 0px;">We are currently planning future events. Please check back later!</p>
 		</div>
 	{% endif %}

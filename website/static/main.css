@@ -3,15 +3,11 @@ body {
   flex-direction: column;
   height: 100vh;
   
-  background: #4C5364;
+  background: #666464;
   color: #333333;
   padding-top: 100px;
 
   font-family: Arial, Helvetica, sans-serif;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: #444444;
 }
 
 main {
@@ -43,13 +39,17 @@ main {
   padding: 0px;
   min-height: 100px;
   opacity: 100%;
-  background-color: #FAFAFA;
+  background-color: #FAECDC;
   transition: opacity 0.4s, min-height 0.2s;
 }
 
 .my-header.scrolled {
   min-height: 60px;
-  opacity: 90%;
+  opacity: 80%;
+}
+
+.my-header.scrolled:hover {
+  opacity: 100%;
 }
 
 .my-header .brand {
@@ -83,17 +83,17 @@ main {
 
 .site-header .navbar-nav .nav-link {
   position: static;
-  color: #646464;
+  color: #4C4C4C;
   margin-left: 16px;
   padding: 6px;
   border-bottom: 1px solid;
-  border-color: #FAFAFA;
+  border-color: #FAECDC;
   transition: color 0.4s, border-color 0.4s;
 }
 
 .site-header .navbar-nav .nav-link:hover {
   color: black;
-  border-color: #AEAEAE;
+  border-color: #999187;
 }
 
 .site-header .navbar-nav .nav-link.active {
@@ -105,8 +105,8 @@ main {
   color: #E6E6E6;
   background-color: #242424;
   text-align: center;
-  padding: 4px;
-  font-size: 14px;
+  padding: 3px;
+  font-size: 10px;
 }
 
 .content-section {
@@ -283,6 +283,10 @@ div.fit-img img {
 
 div.resources p {
   margin-bottom: 0px;
+}
+
+.bg-lite {
+  background-color: #FAF6F2;
 }
 
 .shadow {

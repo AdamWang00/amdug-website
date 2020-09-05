@@ -2,7 +2,7 @@
 {% block content %}
 <h1 class="mb-3" style="color: white;">Posts by {{ user.name }} ({{ posts.total }})</h1>
 {% for post in posts.items %}
-<article class="horizontal content-section shadow bg-light">
+<article class="horizontal content-section shadow bg-lite">
 	<img class="rounded-circle article-img mt-4 ml-4 mr-2" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
 	<div class="row flex">
 		<div class="col-lg-6">

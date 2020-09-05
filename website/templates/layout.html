@@ -38,7 +38,7 @@
 				<div class="collapse navbar-collapse" id="navbarToggle">
 					<div class="navbar-nav mr-auto">
 						<a id="events-link" class="nav-item nav-link" href="{{ url_for('main.events') }}">Events</a>
-						<a id="opportunities-link" class="nav-item nav-link" href="{{ url_for('main.opportunities') }}">Opportunities 2020-2021</a>
+						<a id="opportunities-link" class="nav-item nav-link" href="{{ url_for('main.opportunities') }}">Opportunities</a>
 						<a id="resources-link" class="nav-item nav-link" href="{{ url_for('main.resources') }}">Resources</a>
 						<a id="about-link" class="nav-item nav-link" href="{{ url_for('main.about') }}">About</a>
 						<a id="contact-link" class="nav-item nav-link" href="{{ url_for('main.contact') }}">Contact</a>
@@ -61,7 +61,7 @@
 					</div>
 					<div class="navbar-nav">
 						{% if current_user.is_authenticated %}
-							<a class="nav-item nav-link" href="{{ url_for('posts.new_post') }}">New Post</a>
+							<a class="nav-item nav-link" href="{{ url_for('posts.new_post') }}">New Event</a>
 							<a class="nav-item nav-link" href="{{ url_for('users.account') }}">Account</a>
 							<a class="nav-item nav-link" href="{{ url_for('users.logout') }}">Logout</a>
 						{% endif %}
