@@ -1,7 +1,8 @@
-from flask import flash, render_template, redirect, url_for, request, Blueprint
+from flask import flash, render_template, redirect, url_for, request, Blueprint, current_app, Response
 from website.main.forms import ContactForm
 from website.main.utils import send_contact_email
 from website.models import Post
+import os
 
 
 main = Blueprint('main', __name__)
@@ -42,3 +43,9 @@ def contact():
         flash('Your message has been sent. We will get back to you soon!', 'success')
         return redirect(url_for('main.contact'))
     return render_template('contact.html', title='Contact', form=form)
+
+
+@main.route("/sitemap", methods=['GET'])
+def sitemap():
+    sitemap = open(os.path.join(current_app.root_path, 'static/sitemap.xml'), 'r')
+    return Response(sitemap, mimetype='text/xml')
