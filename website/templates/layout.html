@@ -4,11 +4,11 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="The official site of Brown University's Applied Mathematics Departmental Undergraduate Group.">
+	<meta name="description" content="Welcome to the official site of Brown University's Applied Mathematics Departmental Undergraduate Group.">
 
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+	<link rel="preload" as="style" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" onload="this.rel='stylesheet';">
+	<link rel="preload" as="style" href="{{ url_for('static', filename='main.css') }}" onload="this.rel='stylesheet';">
 	<link href="https://fonts.googleapis.com/css2?family=Lora&family=Quicksand:wght@300&display=swap" rel="stylesheet">
 	<style>
 		body {
