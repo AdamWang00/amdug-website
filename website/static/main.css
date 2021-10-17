@@ -58,7 +58,7 @@ main {
   color: #860900;
   font-family: 'Quicksand', sans-serif;
   font-size: 32px;
-  transition: font-size 0.2s, color 0.4s;
+  transition: color 0.4s;
 }
 
 .my-header .brand:hover {
