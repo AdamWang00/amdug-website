@@ -45,7 +45,6 @@ main {
 
 .my-header.scrolled {
   min-height: 60px;
-  opacity: 80%;
 }
 
 .my-header.scrolled:hover {
